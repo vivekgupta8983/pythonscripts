@@ -8,7 +8,7 @@ def print_menu():
     print(67 * "-")
 
 def deploy_httpd():
-    commands_to_run = ['yum', '-y', 'install', 'httpd', 'mariadb', 'mariadb-server', 'php', 'php-mysql'],
+    commands_to_run = ['yum', '-y', 'install', 'httpd', 'mariadb', 'mariadb-server', 'php', 'php-mysql', 'mod_ssl'],
     ['systemctl', 'start', 'httpd.service'], ['systemctl', 'enable', 'httpd.service'], ['systemctl', 'start', 'mariadb'],
     ['systemctl', 'enable', 'mariadb.service'], ['systemctl', 'restart', 'httpd.service']
 
